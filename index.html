@@ -63,26 +63,34 @@
 
   <script>if(confirm("Join Our Telegram Channel @Livelinks445")) { window.location.href = "https://t.me/livelinks445" }
     document.addEventListener("DOMContentLoaded", function() {
-      var videoSources = {
-      "feed_1": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2100310/uhd_akamai_ctv_avc_eng_olympic_feed1_270724/index.m3u8",
-      "feed_2": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2100311/uhd_akamai_ctv_avc_eng_olympic_feed2_270724/index.m3u8",
-      "feed_3": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2100311/uhd_akamai_ctv_avc_eng_olympic_feed3_270724/index.m3u8",
-      "feed_4": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112593/uhd_akamai_ctv_avc_eng_olympic_feed4_270724/index.m3u8",
-      "feed_5": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112593/uhd_akamai_ctv_avc_eng_olympic_feed5_270724/index.m3u8",
-      "feed_6": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112594/uhd_akamai_ctv_avc_eng_olympic_feed6_270724/index.m3u8",
-      "feed_7": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112594/uhd_akamai_ctv_avc_eng_olympic_feed7_270724/index.m3u8",
-      "feed_8": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112595/uhd_akamai_ctv_avc_eng_olympic_feed8_270724/index.m3u8",
-      "feed_9": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112595/uhd_akamai_ctv_avc_eng_olympic_feed9_270724/index.m3u8",
-      "feed_10": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112596/uhd_akamai_ctv_avc_eng_olympic_feed10_270724/index.m3u8",
-      "feed_11": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112596/uhd_akamai_ctv_avc_eng_olympic_feed11_270724/index.m3u8",
-      "feed_12": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112597/uhd_akamai_ctv_avc_eng_olympic_feed12_270724/index.m3u8",
-      "feed_13": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112598/uhd_akamai_ctv_avc_eng_olympic_feed13_270724/index.m3u8",
-      "feed_14": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112598/uhd_akamai_ctv_avc_eng_olympic_feed14_270724/index.m3u8",
-      "feed_15": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112598/uhd_akamai_ctv_avc_eng_olympic_feed15_270724/index.m3u8",
-      "feed_16": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112599/uhd_akamai_ctv_avc_eng_olympic_feed16_270724/index.m3u8",
-      "feed_17": "https://prod-sports-eng-cf.jiocinema.com/hls/live/2112599/uhd_akamai_ctv_avc_eng_olympic_feed17_270724/index.m3u8"
-    };
-
+      var videoSources = 
+     {
+        "Hindi_feed": "https://prod-sports-hin-fa.jiocinema.com/hls/live/2112615/uhd_akamai_ctv_avc_hin_olympic_india_270724/index.m3u8",
+        "Hindi_feed_2": "https://prod-sports-hin-fa.jiocinema.com/hls/live/2112615/uhd_akamai_ctv_avc_hin_olympic_international_270724/master.m3u8",
+        "English_feed": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100309/uhd_akamai_ctv_avc_eng_olympic_india_270724/index.m3u8",
+        "English_feed_2": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100309/uhd_akamai_ctv_avc_eng_olympic_international_270724/index.m3u8",
+        "Women's_feed": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100310/uhd_akamai_ctv_avc_eng_olympic_womens_270724/index.m3u8",
+        "Tamil_feed": "https://prod-sports-south-fa.jiocinema.com/hls/live/2100289/uhd_akamai_ctv_avc_tam_olympic_india_270724/master.m3u8",
+        "Telugu_feed": "https://prod-sports-south-fa.jiocinema.com/hls/live/2109481/uhd_akamai_ctv_avc_tel_olympic_india_270724/master.m3u8",
+        "feed_1": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100310/uhd_akamai_ctv_avc_eng_olympic_feed1_270724/index.m3u8",
+        "feed_2": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100311/uhd_akamai_ctv_avc_eng_olympic_feed2_270724/index.m3u8",
+        "feed_3": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100311/uhd_akamai_ctv_avc_eng_olympic_feed3_270724/index.m3u8",
+        "feed_4": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112593/uhd_akamai_ctv_avc_eng_olympic_feed4_270724/index.m3u8",
+        "feed_5": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112593/uhd_akamai_ctv_avc_eng_olympic_feed5_270724/index.m3u8",
+        "feed_6": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112594/uhd_akamai_ctv_avc_eng_olympic_feed6_270724/index.m3u8",
+        "feed_7": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112594/uhd_akamai_ctv_avc_eng_olympic_feed7_270724/index.m3u8",
+        "feed_8": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112595/uhd_akamai_ctv_avc_eng_olympic_feed8_270724/index.m3u8",
+        "feed_9": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112595/uhd_akamai_ctv_avc_eng_olympic_feed9_270724/index.m3u8",
+        "feed_10": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112596/uhd_akamai_ctv_avc_eng_olympic_feed10_270724/index.m3u8",
+        "feed_11": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112596/uhd_akamai_ctv_avc_eng_olympic_feed11_270724/master_aac.m3u8",
+        "feed_12": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112597/uhd_akamai_ctv_avc_eng_olympic_feed12_270724/index.m3u8",
+        "feed_13": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112597/uhd_akamai_ctv_avc_eng_olympic_feed13_270724/index.m3u8",
+        "feed_14": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112598/uhd_akamai_ctv_avc_eng_olympic_feed14_270724/index.m3u8",
+        "feed_15": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112598/uhd_akamai_ctv_avc_eng_olympic_feed15_270724/index.m3u8",
+        "feed_16": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112599/uhd_akamai_ctv_avc_eng_olympic_feed16_270724/index.m3u8",
+        "feed_17": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112599/uhd_akamai_ctv_avc_eng_olympic_feed17_270724/index.m3u8"
+      };
+  
       var playerInstance = jwplayer("video");
 
       document.getElementById("video-select").addEventListener("change", function() {
