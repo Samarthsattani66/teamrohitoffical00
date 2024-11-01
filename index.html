@@ -1,134 +1,188 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Telegram-Live links</title>
-  <script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
-  <style>
-    body {
-      margin: 0;
+<title>TG-SAMARTH</title>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.4/dist/hls.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.css"/>
+<script src="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.min.js"></script>
+<style>
+html {
+font-family: sans-serif;
+background: #000;
+}
+.plyr {
+height: 100%;
+width :100%;
+}
+:root {
+--plyr-color-main: #d9230f;
+}
+.loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+    }
+    
+    .loading-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    
+    .loading-text span {
+        display: inline-block;
+        margin: 0 5px;
+        color: #00b3ff;
+        font-family: 'Quattrocento Sans', sans-serif;
+    }
+    
+    .loading-text span:nth-child(1) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(2) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.2s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(3) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.4s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(4) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.6s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(5) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.8s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(6) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(7) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.2s infinite linear alternate;
+    }
+    .loading-text span:nth-child(8) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.4s infinite linear alternate;
+    }
+    .loading-text span:nth-child(9) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.6s infinite linear alternate;
+    }
+    .loading-text span:nth-child(10) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.8s infinite linear alternate;
+    }
+    .loading-text span:nth-child(11) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 2s infinite linear alternate;
+    }
+    .loading-text span:nth-child(12) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 2.2s infinite linear alternate;
+    }
+    @keyframes blur-text {
+        0% {
+            filter: blur(0px);
+        }
+        100% {
+            filter: blur(4px);
+        }
     }
 
-    .jwplayer {
-      position: absolute !important;
+    .plyr__video-wrapper::before {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+        content: '';
+        height: 35px;
+        width: 35px;
+        background-size: 35px auto, auto;
     }
 
-    #video-selector {
-      margin: 10px;
-    }
-
-    #language-switch {
-      padding: 10px 20px;
-      background-color: #007bff; /* Blue color, you can change this */
-      color: #fff; /* White text color */
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 10px;
-      transition: background-color 0.3s ease;
-    }
-
-    #language-switch:hover {
-      background-color: #0056b3; /* Darker blue on hover */
-    }
-  </style>
+</style>
 </head>
 <body>
-  <br>
-  <select id="video-select">
-    <option value="feed_1" selected="">Feed 1</option>
-    <option value="feed_2">Feed 2</option>
-    <option value="feed_3">Feed 3</option>
-    <option value="feed_4">Feed 4</option>
-    <option value="feed_5">Feed 5</option>
-    <option value="feed_6">Feed 6</option>
-    <option value="feed_7">Feed 7</option>
-    <option value="feed_8">Feed 8</option>
-    <option value="feed_9">Feed 9</option>
-    <option value="feed_10">Feed 10</option>
-    <option value="feed_11">Feed 11</option>
-    <option value="feed_12">Feed 12</option>
-    <option value="feed_13">Feed 13</option>
-    <option value="feed_14">Feed 14</option>
-    <option value="feed_15">Feed 15</option>
-    <option value="feed_16">Feed 16</option>
-    <option value="feed_17">Feed 17</option>
-  </select>
-
-  <button id="language-switch">Select Your Feed Here</button>
-
-  <div id="video"></div>
-
-  <script>if(confirm("Join Our Telegram Channel @Livelinks445")) { window.location.href = "https://t.me/livelinks445" }
-    document.addEventListener("DOMContentLoaded", function() {
-      var videoSources =  {
-  
-        "Hindi_feed": "https://prod-sports-hin-fa.jiocinema.com/hls/live/2112615/uhd_akamai_ctv_avc_hin_olympic_india_270724/index.m3u8",
-        "Hindi_feed_2": "https://prod-sports-hin-fa.jiocinema.com/hls/live/2112615/uhd_akamai_ctv_avc_hin_olympic_international_270724/master.m3u8",
-        "English_feed": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100309/uhd_akamai_ctv_avc_eng_olympic_india_270724/index.m3u8",
-        "English_feed_2": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100309/uhd_akamai_ctv_avc_eng_olympic_international_270724/index.m3u8",
-        "Women's_feed": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100310/uhd_akamai_ctv_avc_eng_olympic_womens_270724/index.m3u8",
-        "Tamil_feed": "https://prod-sports-south-fa.jiocinema.com/hls/live/2100289/uhd_akamai_ctv_avc_tam_olympic_india_270724/master.m3u8",
-        "Telugu_feed": "https://prod-sports-south-fa.jiocinema.com/hls/live/2109481/uhd_akamai_ctv_avc_tel_olympic_india_270724/master.m3u8",
-        "feed_1": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100310/uhd_akamai_ctv_avc_eng_olympic_feed1_270724/index.m3u8",
-        "feed_2": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100311/uhd_akamai_ctv_avc_eng_olympic_feed2_270724/index.m3u8",
-        "feed_3": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2100311/uhd_akamai_ctv_avc_eng_olympic_feed3_270724/index.m3u8",
-        "feed_4": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112593/uhd_akamai_ctv_avc_eng_olympic_feed4_270724/index.m3u8",
-        "feed_5": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112593/uhd_akamai_ctv_avc_eng_olympic_feed5_270724/index.m3u8",
-        "feed_6": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112594/uhd_akamai_ctv_avc_eng_olympic_feed6_270724/index.m3u8",
-        "feed_7": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112594/uhd_akamai_ctv_avc_eng_olympic_feed7_270724/index.m3u8",
-        "feed_8": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112595/uhd_akamai_ctv_avc_eng_olympic_feed8_270724/index.m3u8",
-        "feed_9": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112595/uhd_akamai_ctv_avc_eng_olympic_feed9_270724/index.m3u8",
-        "feed_10": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112596/uhd_akamai_ctv_avc_eng_olympic_feed10_270724/index.m3u8",
-        "feed_11": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112596/uhd_akamai_ctv_avc_eng_olympic_feed11_270724/master_aac.m3u8",
-        "feed_12": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112597/uhd_akamai_ctv_avc_eng_olympic_feed12_270724/index.m3u8",
-        "feed_13": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112597/uhd_akamai_ctv_avc_eng_olympic_feed13_270724/index.m3u8",
-        "feed_14": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112598/uhd_akamai_ctv_avc_eng_olympic_feed14_270724/index.m3u8",
-        "feed_15": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112598/uhd_akamai_ctv_avc_eng_olympic_feed15_270724/index.m3u8",
-        "feed_16": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112599/uhd_akamai_ctv_avc_eng_olympic_feed16_270724/index.m3u8",
-        "feed_17": "https://prod-sports-eng-fa.jiocinema.com/hls/live/2112599/uhd_akamai_ctv_avc_eng_olympic_feed17_270724/index.m3u8"
-      };
-  
-      var playerInstance = jwplayer("video");
-
-      document.getElementById("video-select").addEventListener("change", function() {
-        var selectedValue = this.value;
-        var videoSource = videoSources[selectedValue];
-
-        playerInstance.load([{ file: videoSource }]);
-        playerInstance.play();
-      });
-
-      document.getElementById("language-switch").addEventListener("click", function() {
-        var selectedValue = document.getElementById("video-select").value;
-        var currentIndex = Object.keys(videoSources).indexOf(selectedValue);
-        var nextIndex = (currentIndex + 1) % Object.keys(videoSources).length;
-        var nextLanguage = Object.keys(videoSources)[nextIndex];
-        document.getElementById("video-select").value = nextLanguage;
-
-        var videoSource = videoSources[nextLanguage];
-        playerInstance.load([{ file: videoSource }]);
-        playerInstance.play();
-      });
-
-      var selectedValue = document.getElementById("video-select").value;
-      var videoSource = videoSources[selectedValue];
-
-      playerInstance.setup({
-        autostart: true,
-        mute: false,
-        playlist: [{ file: videoSource }]
-      });
-    });
-  </script>
-
-  <div style="background-color: #0074d9; text-align: center; padding: 10px;">
-    <a href="https://telegram.me/finallylivestreaming" target="_blank">
-      <button id="joinTelegramButton" style="background-color: #fff; color: #0074d9; border: 2px solid #0074d9; padding: 5px 10px;">JOIN TELEGRAM</button>
-    </a>
-  </div>
-
+ <div id="loading" class="loading">
+<div class="loading-text">
+    <span class="loading-text-words" style="color:#d9230f;">T</span>
+    <span class="loading-text-words" style="color:#d9230f;">G</span>
+    <span class="loading-text-words" style="color:#d9230f;">-</span>
+    <span class="loading-text-words" style="color:#d9230f;">S</span>
+    <span class="loading-text-words" style="color:#d9230f;">A</span>
+    <span class="loading-text-words" style="color:#d9230f;">M</span>
+    <span class="loading-text-words" style="color:#d9230f;">A</span>
+    <span class="loading-text-words" style="color:#d9230f;">R</span>
+    <span class="loading-text-words" style="color:#d9230f;">T</span><span class="loading-text-words" style="color:#d9230f;">H</span></div>
+</div>
+<div>
+<video autoplay controls crossorigin playsinline>
+<source type="application/vnd.apple.mpegurl" src="https://jcevents.jiocinema.com/bpk-tv/JC_ColorsCineplexHD/JCHLS/index.m3u8"video>
+</div>
 </body>
+<script>
+ setTimeout(videovisible, 3000)
+function videovisible() {
+    document.getElementById('loading').style.display = 'none'
+}
+document.addEventListener("DOMContentLoaded", () => {
+const e = document.querySelector("video"),
+n = e.getElementsByTagName("source")[0].src,
+o = {};
+if(Hls.isSupported()) {
+var config = {
+maxMaxBufferLength: 100,
+};
+const t = new Hls(config);
+t.loadSource(n), t.on(Hls.Events.MANIFEST_PARSED, function(n, l) {
+const s = t.levels.map(e => e.height);
+o.quality = {
+default: s[0],
+options: s,
+forced: !0,
+onChange: e => (function(e) {
+window.hls.levels.forEach((n, o) => {
+n.height === e && (window.hls.currentLevel = o)
+})
+})(e)
+};
+new Plyr(e, o)
+}), t.attachMedia(e), window.hls = t
+} else {
+new Plyr(e, o)
+}
+});
+  </script>
+<script> alert("JOIN MY TELEGRAM CHANNEL LIVE LINKS BY TEAMROHITOFFICAL45 ")
+</script>
+}
+</script>
+  </body>
 </html>
+
+
+
